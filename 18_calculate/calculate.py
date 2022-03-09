@@ -26,3 +26,41 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('foo', 2, 3)
         
     """
+
+    result = 0
+
+    if operation == 'add':
+        result = a + b
+        return message + " " + str(result)
+    elif operation == 'subtract':
+        result = a - b
+        return message + " " + str(result)
+    elif operation == 'multiply':
+        result = a * b
+        return message + " " + str(result)
+    elif operation == 'divide':
+        result = a / b
+        return message + " " + str(result)
+    else:
+        return None
+
+
+# Performs math operation (truncating if make_int), then returns as "[message] [result]"
+
+print(calculate('add', 2.5, 4))
+# 'The result is 6.5'
+
+print(calculate('subtract', 4, 1.5, make_int=True))
+# 'The result is 2'
+
+print(calculate('multiply', 1.5, 2))
+# 'The result is 3.0'
+
+print(calculate('divide', 10, 4, message='I got'))
+# 'I got 2.5'
+
+
+# If a valid operation isn't provided, return None.
+
+print(calculate('foo', 2, 3))
+# None

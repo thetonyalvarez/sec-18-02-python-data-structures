@@ -29,3 +29,29 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+
+    count = 0
+
+    for ltr in word:
+        count = count + ord(ltr)
+    
+    return count % 2 == 1
+
+
+
+# For each character, find it's "character position" ("a"=1, "b"=2, etc). Return True/False, depending on whether sum of those numbers is odd.
+
+print(is_odd_string('a'))
+# True
+
+print(is_odd_string('A'))
+# True
+
+print(is_odd_string('aaaa'))
+# False
+
+print(is_odd_string('AAaa'))
+# False
+
+print(is_odd_string('amazing'))
+# True

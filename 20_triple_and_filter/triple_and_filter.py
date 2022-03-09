@@ -13,3 +13,23 @@ def triple_and_filter(nums):
         >>> triple_and_filter([1, 2])
         []
     """
+
+    result = []
+
+    for num in nums:
+        if num % 4 == 0:
+            num = num * 3
+            result.append(num)
+    return result
+
+
+# Return every number in list that is divisible by 4 in a new list, except multipled by 3.
+
+print(triple_and_filter([1, 2, 3, 4]))
+# [12]
+
+print(triple_and_filter([6, 8, 10, 12]))
+# [24, 36]
+
+print(triple_and_filter([1, 2]))
+# []

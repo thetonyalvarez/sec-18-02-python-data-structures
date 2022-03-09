@@ -21,3 +21,29 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+
+    if phrase[::-1].lower().replace(' ','') == phrase[::].lower().replace(' ',''):
+        return True
+    else:
+        return False
+
+
+# Return True/False if phrase is a palindrome (same read backwards and forwards).
+
+print(is_palindrome('tacocat'))
+# returns True
+
+print(is_palindrome('noon'))
+# returns True
+
+print(is_palindrome('robert'))
+# returns False
+
+
+# Should ignore capitalization/spaces when deciding:
+
+print(is_palindrome('taco cat'))
+# returns True
+
+print(is_palindrome('Noon'))
+# returns True

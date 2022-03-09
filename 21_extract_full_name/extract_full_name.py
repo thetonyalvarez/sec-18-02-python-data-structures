@@ -14,3 +14,22 @@ def extract_full_names(people):
         >>> extract_full_names(names)
         ['Ada Lovelace', 'Grace Hopper']
     """
+
+    names = []
+
+    for person in people:
+        # print(person)
+        full_name = " ".join([person['first'], person['last']])
+        names.append(full_name)
+    return names
+
+
+# Returns list of space-separated first and last names.
+
+names = [
+    {'first': 'Ada', 'last': 'Lovelace'},
+    {'first': 'Grace', 'last': 'Hopper'},
+]
+
+print(extract_full_names(names))
+# ['Ada Lovelace', 'Grace Hopper']
